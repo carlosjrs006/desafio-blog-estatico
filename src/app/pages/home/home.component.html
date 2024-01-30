@@ -51,7 +51,7 @@
               Adicionar Comentário
             </button>
       
-            <div class="mt-3" *ngIf="item.comentarios.length > 0">
+            <div class="mt-3" *ngIf="item.comentarios.length > 0 && item.comentarios">
               <h6>Comentários:</h6>
               <ul class="list-group">
                 <li class="list-group-item" *ngFor="let comment of item.comentarios">
