@@ -9,7 +9,7 @@ import { jwtDecode } from 'jwt-decode';
   providedIn: 'root',
 })
 export class LoginService {
-  private apiUrl = 'https://desafio-blog-api-production.up.railway.app/auth';
+  private apiUrl = 'http://localhost:8080/auth';
 
   constructor(private http: HttpClient, private authService: AuthService) {}
 

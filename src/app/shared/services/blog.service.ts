@@ -6,7 +6,7 @@ import { Observable, map } from 'rxjs';
   providedIn: 'root'
 })
 export class BlogService {
-  private apiUrl = 'https://desafio-blog-api-production.up.railway.app';
+  private apiUrl = 'http://localhost:8080';
   private eventSource!: EventSource;
 
   constructor(private http: HttpClient) {}
@@ -51,7 +51,7 @@ export class BlogService {
   }
 
   initSSE(): Observable<any> {
-    this.eventSource = new EventSource('https://desafio-blog-api-production.up.railway.app/publicacao/subscribe');
+    this.eventSource = new EventSource('http://localhost:8080/publicacao/subscribe');
 
 
     return new Observable<any>(observer => {
