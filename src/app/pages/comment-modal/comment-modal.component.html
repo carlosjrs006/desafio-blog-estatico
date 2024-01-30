@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>Adicionar Comentário</h2>
+<mat-dialog-content>
+  <textarea matInput placeholder="Seu Comentário" [(ngModel)]="newComment"
+  style="width: 100%;"
+  ></textarea>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="newComment" cdkFocusInitial>Enviar Comentário</button>
+  <button mat-button (click)="closeModal()">Cancelar</button>
+</mat-dialog-actions>

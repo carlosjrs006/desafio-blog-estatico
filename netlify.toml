@@ -1,0 +1,8 @@
+[build]
+  command="ng build"
+  publish="dist/front-blog-desafio"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

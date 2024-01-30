@@ -1,0 +1,30 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <!-- Título ou Logotipo do Site -->
+      <a class="navbar-brand" href="#">Meu Blog</a>
+  
+      <!-- Botão de navegação para telas menores -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Itens do Menu -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <!-- Outros itens do menu aqui -->
+        </ul>
+  
+        <!-- Nome do Usuário e Logout centralizados -->
+        <div class="d-flex justify-content-center align-items-center">
+          <span class="navbar-text mx-3 text-light">
+            <i class="fas fa-user"></i> {{ userName }}
+          </span>
+  
+          <a class="nav-link text-light" href="#" (click)="logout()">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>

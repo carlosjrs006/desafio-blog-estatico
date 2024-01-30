@@ -1,0 +1,39 @@
+<h2 mat-dialog-title>Adicionar Posts</h2>
+<mat-dialog-content [formGroup]="postFormGroup">
+  <div class="mb-3">
+    <label for="newPostTitle" class="form-label">Título</label>
+    <input type="text" class="form-control" id="newPostTitle" formControlName="newPostTitle">
+  </div>
+
+  <div class="mb-3">
+    <label for="newPostDescription" class="form-label">Descrição</label>
+    <textarea class="form-control" id="newPostDescription" formControlName="newPostDescription" rows="5"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <p-fileUpload
+            [style]="{ 'margin-top': '1rem' }"
+            [multiple]="true"
+            accept="image/*"
+            [maxFileSize]="maxFileSize"
+            [fileLimit]="fileLimit"
+            [showUploadButton]="false"
+            [chooseLabel]="chooseLabel"
+            (onSelect)="onFileSelect($event)"
+          >
+            <ng-template pTemplate="content">
+              <ul *ngIf="uploadedFiles.length">
+                <li *ngFor="let file of uploadedFiles">
+                  {{ file.name }} - {{ file.size }} bytes
+                </li>
+              </ul>
+            </ng-template>
+          </p-fileUpload>
+  </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="getFormData()">Enviar Postagem</button>
+  <button mat-button (click)="closeModal()">Cancelar</button>
+</mat-dialog-actions>

@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+/* Adicione esta linha no início do arquivo styles.css ou styles.scss */
+
+
+html, body { height: 100%; background-color: #E4E4E7}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Correto */
+@import "primeng/resources/primeng.css";
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "primeng/resources/primeng.css";
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import 'primeicons/primeicons.css';
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
